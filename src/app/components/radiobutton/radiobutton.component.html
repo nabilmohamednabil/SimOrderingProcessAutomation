@@ -1,0 +1,24 @@
+<div class="main-content page-m">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="form-area">
+                <h3>Did Vendor Validate Input Files and they are approperiate ?</h3>
+                <form [formGroup]="inputValidation">
+                    <div class="radio">
+                        <label>
+                            <input type="radio"  value="yes" formControlName="answer">
+                            <span>Yes , Validated and they are proper</span>
+                        </label>
+                        <label>
+                            <input type="radio" value="no" formControlName="answer">
+                            <span>No , didn't validate</span>
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <button (click)="onSubmit()" class="btn btn-info">Confirm</button>
+                    </div>
+                </form>
+            </div> 
+        </div>
+    </div>
+</div>

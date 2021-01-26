@@ -1,0 +1,22 @@
+<div class="bg-img">
+    <div class="container">
+        <form [formGroup]="userForm" (ngSubmit)="submitregister()" novalidate>
+            <div class="form-group">
+                <label>User Name</label>
+                <input type="text" class="form-control" formControlName="username" required autofocus/>
+            </div>
+            <div class="form-group">
+                <label>e-mail</label>
+                <input type="email" class="form-control" formControlName="email" required/>
+            </div>
+            <div class="form-group">
+                <label>password</label>
+                <input type="password" class="form-control" formControlName="password" required/>
+            </div>
+            <div>
+                <p *ngIf="NotAuthenticated">Not authorized </p>
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+    </div>
+</div>

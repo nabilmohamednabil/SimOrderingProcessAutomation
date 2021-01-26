@@ -1,0 +1,109 @@
+<div class="page-wrapper">
+
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+        <div class="logo">
+            <a href="#">
+                <img src="assets/images/logo.png" alt="vodafone" class="img-responsive">
+            </a>
+        </div>
+
+        <app-menu></app-menu>
+    </aside>
+
+    <div class="page-container">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop">
+            <div class="section-content section-content-p30">
+                <div class="container-fluid">
+                    <div class="header-wrap">
+                       <p>HI {{loggeduser}}</p>
+                    </div>
+                    <div class="account-wrap"></div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+
+        <!-- below is the page content-->
+        <div class="main-content page-m">
+            <div class="section-content section-content-p30">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="panel-group">
+                                <div class = "panel panel-default" *ngFor="let task of Mytasklist">
+                                    <div class = "panel-heading">
+                                       <h3 class = "panel-title">
+                                        {{task.name}}</h3>
+                                    </div>
+                                    <div class = "panel-body">
+                                        {{task.description}} {{checktaskstatus(task.name)}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--
+                    <table  class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>name</th>
+                                <th>description</th>
+                                <th>team</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let x of Mytasklist">
+                                <td>{{x.name}}</td>
+                                <td>{{x.description}}</td>
+                                <td>{{x.team}}</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                -->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--
+  <p>{{simotas}}</p>
+  -->
+
+
+
+<footer>
+
+    <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Help</a></li>
+    </ul>
+</footer>
+
+
+
+<!--
+  <div class="container">
+          <table class="table table-bordered table-inverse">
+              <tr>
+                  <th>username</th>
+                  <th>email</th>
+                  <th>password</th>
+              </tr>
+              <tr *ngFor="let x of users">
+                  <td> 
+                      <a routerLink="/tasks/{{x.username}}">{{x.username}}</a>
+                  </td>
+                  <td>{{x.email}}</td>
+                  <td>{{x.password}}</td>
+              </tr>
+          </table>
+  </div>
+  -->

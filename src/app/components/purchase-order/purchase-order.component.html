@@ -1,0 +1,84 @@
+<div class="main-content page-m">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+
+            <form [formGroup]="checkoutFormGroup">
+                <div formGroupName="Purchase_Order" class=""form-area>
+                    <h3>Purchase Order</h3>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Vendor</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="Vendor" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Volume</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="Volume" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Type</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="Type" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Graphical_reference</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="Graphical_reference" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Profile_reference</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-space">
+                                <input formControlName="Profile_reference" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="text-center">
+                    <button (click)="CheckOutPurhcaseOrder()" class="btn btn-info">check out</button>
+                </div>
+                <br>
+                <div class="form-area">
+                    <h3>Review your purchase Order</h3>
+                    <p> Vendor  ----> {{MyPurchaseOrde.getVendor()}}</p>
+                    <p> Volume  ----> {{MyPurchaseOrde.getVolume()}}</p>
+                    <p> Type    ----> {{MyPurchaseOrde.getType()}}</p>
+                    <p> Graphical Refrence ----> {{MyPurchaseOrde.getGraphical_reference()}}</p>
+                    <p> Profile Reference  ----> {{MyPurchaseOrde.getProfile_reference()}}</p>
+                    <p> Purchase Order Status ----> {{MyPurchaseOrde.getstatus()}}</p>
+                </div>
+                <div class="text-center">
+                    <button (click)="onSubmit()" class="btn btn-info">Order</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
